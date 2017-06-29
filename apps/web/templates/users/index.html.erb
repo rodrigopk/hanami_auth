@@ -1,12 +1,14 @@
 <h2>All users</h2>
 
-<div id="users">
-	<div class="user">
-		<h3>Foo</h3>
-		<p>type: <strong>Admin</strong></p>
+<% if users.any? %>
+	<div id="users">
+		<% users.each do |user| %>
+			<div class="user">
+				<h3><%= user.name %></h3>
+				<p>type: <strong><%= user.type %></strong></p>
+			</div>
+		<% end %>
 	</div>
-	<div class="user">
-		<h3>Bar</h3>
-		<p>type: <strong>Subscriber</strong></p>
-	</div>
-</div>
+<% else %>
+	<p class="placeholder">There are no users yet.</p>
+<% end %>
