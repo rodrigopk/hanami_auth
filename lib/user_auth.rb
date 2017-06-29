@@ -1,0 +1,2 @@
+module UserAuth
+end

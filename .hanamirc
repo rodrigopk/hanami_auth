@@ -1,0 +1,4 @@
+project=user_auth
+architecture=container
+test=minitest
+template=erb
