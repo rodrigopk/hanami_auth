@@ -17,7 +17,7 @@ describe 'Add an user' do
 		end
 
 		current_path.must_equal('/users')
-		assert_page.has_content?('Foo')
+		assert page.has_content?('Foo')
 	end
 
 end

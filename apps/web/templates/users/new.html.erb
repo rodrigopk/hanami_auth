@@ -1,0 +1,24 @@
+<h2>New user</h2>
+
+<%=
+  form_for :user, '/users', class: 'user-form' do
+    div class: 'input' do
+      label      :name
+      text_field :name
+    end
+
+    div class: 'input' do
+      label      :email
+      text_field :email
+    end
+
+    div class: 'password' do
+      label      :password
+      text_field :password, type: 'password'
+    end
+
+    div class: 'controls' do
+      submit 'Sign up'
+    end
+  end
+%>
